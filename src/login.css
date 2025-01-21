@@ -1,0 +1,52 @@
+
+.login-form-container {
+    padding: 40px;
+    border-radius: 5px;
+    width: 400px;
+    border-radius: 20px;
+    text-align: center;
+   border: 2px solid black;
+   margin: 0 auto;
+    margin-top: 100px;
+}
+h2 {
+    margin-bottom: 20px;
+    /* color: #ffff; */
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#Login input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background: transparent;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    transition: all 0.3s;
+}
+
+.signup-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    /* color: #ffff; */
+    text-decoration: none;
+}
+
