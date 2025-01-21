@@ -6,6 +6,7 @@ import './App.css'
 import CreatePost from './CreatePost'
 import Dashboard from './Dashboard'
 import Navbar from './Navbar'
+import EditPosts from './EditPosts'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='createpost' element={<CreatePost/>}/>
         <Route path='login' element={<Login />} />
         <Route path='dashboard' element={<Dashboard/>} />
+        <Route path='editpost/:id' element = {<EditPosts/>}/>
       </Routes>
     </Router>
     </>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 function Dashboard() {
     const Navigate = useNavigate();
@@ -16,10 +16,11 @@ function Dashboard() {
     };
     const deletePost = async (postId) => {
         try {
-            await axios.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`)
-            setPosts((data) => { data.filter((post) => { post.id === postId }) })
-            alert(`Post ${postId} deleted sucessfully`)
-            Navigate('/dashboard')
+            const res = await axios.delete(`https://jsonplaceholder.typicode.com/posts/${postId}`)
+            const data = posts.filter((post)=>post.id !== postId)
+            console.log('>', data)
+            setPosts(data)
+
         } catch {
             console.log(`Error ${postId} delelting post`)
         }
@@ -39,7 +40,7 @@ function Dashboard() {
                             <h3>{post.title}</h3>
                             <p>{post.body}</p>
                             <div className="button">
-                                <button >Edit</button>
+                                <button onClick={() => Navigate(`/editpost/${post.id}`)}>Edit</button>
                                 <button onClick={() => { deletePost(post.id) }}>Delete</button>
                             </div>
                         </div>
