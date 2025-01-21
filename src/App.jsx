@@ -5,11 +5,13 @@ import './App.css'
 // import SignUp from './Signup'
 import CreatePost from './CreatePost'
 import Dashboard from './Dashboard'
+import Navbar from './Navbar'
 
 function App() {
   return (
     <>
     <Router>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='createpost' element={<CreatePost/>}/>
